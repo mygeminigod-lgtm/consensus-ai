@@ -16,6 +16,7 @@ export async function GET() {
       hasApiKey: isReady,
       badgeStatus: isReady ? "connected" : "offline",
       capabilities: provider.capabilities,
+      description: "",
     });
   }
 
