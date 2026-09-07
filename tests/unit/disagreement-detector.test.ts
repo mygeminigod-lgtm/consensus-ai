@@ -9,7 +9,7 @@ const detectDisagreements = (claims: Claim[], responses: ModelResponse[]): Disag
       id: `d_${c.id}`,
       claimId: c.id,
       claimText: c.text,
-      type: c.category === 'number' ? 'number_mismatch' : 'factual_contradiction',
+      type: c.category === 'number' ? 'number_mismatch' : 'contradictory_facts',
       severity: c.importance === 'high' ? 'high' : 'medium',
       modelPositions: [],
       resolutionStrategy: 'verify'

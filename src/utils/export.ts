@@ -47,7 +47,7 @@ export function exportAsMarkdown(answer: FinalAnswer): string {
   
   if (answer.modelsConsulted && answer.modelsConsulted.length > 0) {
     md += `## Models Consulted\n\n`;
-    answer.modelsConsulted.forEach(res => {
+    answer.modelsConsulted.forEach((res: any) => {
       md += `- **${res.providerName}** (${res.model})\n`;
     });
   }
